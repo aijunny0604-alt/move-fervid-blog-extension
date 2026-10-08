@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "무브 · 퍼비드 블로그 도우미",
+  "version": "1.4.0",
+  "description": "사진과 메모에서 Codex로 블로그를 만들고 실제 사진과 원고를 네이버에 입력합니다.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "nativeMessaging"
+  ],
+  "action": {
+    "default_title": "블로그 도우미 열기"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "128": "icon.png"
+  },
+  "host_permissions": [
+    "http://127.0.0.1:18764/*",
+    "https://blog.naver.com/*"
+  ],
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyKks1Vfv92a7twhFYxaotVJGMp5Y/hj8IX/jB+S0QQRIM3+AhYIHLXiQ0h3eGJDRkhAbgVA8xZH7MEHxmyj30ieIB6Gx9bZk0DiPt4KpZm/0JdId+iQE73FZ1dQEZBx+l2l84HJxd41wGwH9IKp8Bvrg3j1Wwf0HhncQh/SSS61d2niqwfCphEreT1SMULWhNOW7eEO9+m7wQBL9LAsY3i8BgHOnfaJ6sF7Hm0wJCUMC0pgp27eRf5TmVPNIa/m/mKXNqo+Q9Z782d/sRKSOnlav8qSwPvVd0FJzNmWT/6Rb+N9R7lwTiu8uJ1trre0jcEp4iDWijDCauUup+fyK4wIDAQAB"
+}

@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>무브 · 퍼비드 크롬 확장</title><link rel="stylesheet" href="studio.css"></head>
+<body><main><header><small>MOVE · FERVID / CHROME</small><h1>사진에서 완성 글까지.</h1><p>사진과 메모를 넣으면 글·썸네일·검색량 분석을 함께 만듭니다.</p><span id="connection">Codex 자동 연결 중</span> <button id="reconnect" class="secondary">다시 연결</button></header>
+<section><div class="step">01 · 작업 자료</div><div class="brands"><label><input type="radio" name="brand" value="fervid" checked> 팀퍼비드</label><label><input type="radio" name="brand" value="move"> 무브모터스</label></div>
+<div class="pickers"><label class="button">폴더 선택<input id="folder" type="file" webkitdirectory multiple hidden></label><label class="button secondary">사진·메모 선택<input id="files" type="file" multiple accept=".jpg,.jpeg,.png,.webp,.txt,.md" hidden></label></div>
+<p id="selection">JPG · PNG · WebP / 메모장 TXT · MD</p><label for="details">차량 · 작업 내용</label><textarea id="details" rows="3" placeholder="예: BMW F16 X6 30d / 100파이 블랙 듀얼팁. 메모장이 있으면 비워도 됩니다."></textarea><details><summary>함께 읽을 참고 메모</summary><div id="notes">선택된 메모가 없습니다.</div></details>
+<button id="create" class="primary" disabled>블로그 만들기</button><p class="fine">현재 Codex의 ChatGPT 구독 사용량을 사용합니다. 사진과 메모가 Codex에 전달됩니다.</p></section>
+<section id="progress" hidden><div class="step">02 · 만드는 중</div><h2 id="stage"></h2><progress id="bar" max="100"></progress><p id="error"></p></section>
+<section id="result" hidden><div class="step">03 · 확인 후 네이버로</div><h2 id="resultTitle"></h2><div id="warnings"></div><div class="pickers"><button id="preview">글 미리보기</button><button id="analysis" class="secondary">검색량 분석</button></div>
+<label for="schedule">예약 시간 · 한국시간 (선택)</label><input id="schedule" type="datetime-local" step="600"><p class="fine">네이버 최종 발행 화면에서 이 시간과 일치하는지 확인합니다.</p>
+<button id="send" class="primary">네이버에 글 넣기</button><p id="handoff"></p><p class="fine">버튼을 누르면 네이버 새 글과 입력 도우미가 열립니다. 내 템플릿의 하단 문의 양식을 남긴 뒤 원고 자동 입력을 누르세요. 제목 배경과 최종 예약 발행은 네이버에서 확인하세요.</p></section>
+<section><div class="step">최근 작업</div><div id="history">아직 작업이 없습니다.</div></section>
+<dialog id="viewer"><button id="closeViewer">닫기</button><iframe id="previewFrame" title="블로그 미리보기" sandbox></iframe><pre id="analysisText" hidden></pre></dialog>
+<footer>원본 사진 보존 · 글 자동 공개 없음 · 제작 중에는 Chrome을 열어 두세요</footer></main><script src="studio.js"></script><script src="privacy-editor.js"></script></body></html>

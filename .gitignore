@@ -1,0 +1,15 @@
+/.venv/
+**/__pycache__/
+**/*.pyc
+**/jobs/
+**/logs/
+**/local-config.json
+**/bridge-config.json
+**/selected.json
+**/native_host.cmd
+**/native_host_manifest.json
+.blog-studio-connection.json
+.secrets/
+.env
+*.log
+*.zip
